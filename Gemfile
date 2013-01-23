@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+gem "sinatra", :require => "sinatra/base"
+gem "sqlite3"
+gem "dm-core"
+gem "dm-migrations"
+gem "dm-validations"
+gem "dm-timestamps"
+gem "dm-sqlite-adapter"
+gem 'haml'
+source "http://gems.github.com"
+gem "sbfaulkner-sinatra-prawn"

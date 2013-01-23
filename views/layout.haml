@@ -1,0 +1,25 @@
+<!doctype html>
+%html{:lang => "en"}
+  %link{:href => "/rss.xml", :rel => "alternate", :type => "application/rss+xml"}
+    %head
+      %meta{:charset => "utf8"}
+        %title= "#{@title} | #{SITE_TITLE}"
+    %body
+      %header
+        %hgroup
+          %h1
+            %a{:href => "/"}= SITE_TITLE
+          %h2= SITE_DESCRIPTION
+      #main
+        - if flash[:notice]
+          %p.notice
+            = flash[:notice]
+        - if flash[:error]
+          %p.error
+            = flash[:error]
+        = yield
+      %footer
+        %p
+          %small
+            %a{:href => "/"}> Home
+            \.

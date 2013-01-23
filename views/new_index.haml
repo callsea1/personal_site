@@ -1,0 +1,15 @@
+%h1 The new home page has Weather too
+ %p== It appears to be quite #{@weather}
+
+%h2 Temperature
+%p== #{@temperature} degrees!
+
+ %h1 Feeling Friendly
+ %form{:action => "/question", :method => "post"}
+   %legend
+    A simple question
+   %p
+    %label{:for => ""} How are you feeling today?
+     %input{:type => "textbox", :name => "feeling", :id => "feeling"}
+   %p
+    %input{:type => "submit", :value => "Submit!"}

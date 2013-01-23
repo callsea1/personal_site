@@ -1,0 +1,41 @@
+<!doctype html>  
+<html lang="en"> 
+
+<head>  
+<link href="/rss.xml" rel="alternate" type="application/rss+xml">
+
+<script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+<!-- <link rel="stylesheet" href="/css/style.css" type="text/css" /> -->
+
+   <meta charset="utf8">  
+  <title><%= "#{@title} | #{SITE_TITLE}" %></title>
+
+</head>  
+<body>  
+  <header>  
+    <hgroup>  
+      <h1><a href="/"><%= SITE_TITLE %></a></h1>  
+      <h2><%= SITE_DESCRIPTION %></h2>  
+    </hgroup>  
+  </header>  
+  <div id="main">
+
+  <% if flash[:notice] %>  
+    <p class="notice"><%= flash[:notice] %>  
+<% end %>  
+<% if flash[:error] %>  
+    <p class="error"><%= flash[:error] %>  
+<% end %> 
+
+    <%= yield %>  
+  </div>  
+  <footer>  
+    <p><small><a href="/">Home</a>.</small></p>  
+  </footer>  
+</body>  
+</html>  
