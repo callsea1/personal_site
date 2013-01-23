@@ -1,0 +1,1 @@
+web: bundle exec ruby seans_site.rb -p $PORT
