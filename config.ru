@@ -4,4 +4,4 @@ require 'sinatra/base'
 
 
 Bundler.require
-run SeansSite
+run Sinatra::Application
