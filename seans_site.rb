@@ -1,42 +1,42 @@
 require 'sinatra'
 require 'sinatra/base'
-require 'data_mapper'
-require 'rack-flash'
-require 'sinatra/redirect_with_flash'
-require 'haml'
+# require 'data_mapper'
+# require 'rack-flash'
+# require 'sinatra/redirect_with_flash'
+# require 'haml'
 require 'Date'
 set :root, File.dirname(__FILE__)
 set :haml, :format => :html5
-enable :sessions, :logging, :dump_errors
-use Rack::Flash, :sweep => true
+# enable :sessions, :logging, :dump_errors
+# use Rack::Flash, :sweep => true
 SITE_TITLE = "Sean's Webapp"
 SITE_DESCRIPTION = "'Cause working with Sean is pretty great."
 
 
-DataMapper::setup(:default, "sqlite://#{Dir.pwd}/seans_site.db")
-class Note
-	include DataMapper::Resource
-	property :id, Serial
-	property :content, Text, :required => true
-	property :complete, Boolean, :required => true, :default => false
-	property :created_at, DateTime  
-    property :updated_at, DateTime  
-end
-class User
-	include DataMapper::Resource
-	property :id, Serial
-	property :email, Text, :required => true
-	property :name, Text, :required => true
-	property :created_at, DateTime  
-    property :lastlogin_at, DateTime  
-end   
-DataMapper.finalize.auto_upgrade! #updates schema upon change
-helpers do
-	include Rack::Utils
-	alias_method :h, :escape_html
-end 
+# DataMapper::setup(:default, "sqlite://#{Dir.pwd}/seans_site.db")
+# class Note
+# 	include DataMapper::Resource
+# 	property :id, Serial
+# 	property :content, Text, :required => true
+# 	property :complete, Boolean, :required => true, :default => false
+# 	property :created_at, DateTime  
+#     property :updated_at, DateTime  
+# end
+# class User
+# 	include DataMapper::Resource
+# 	property :id, Serial
+# 	property :email, Text, :required => true
+# 	property :name, Text, :required => true
+# 	property :created_at, DateTime  
+#     property :lastlogin_at, DateTime  
+# end   
+# DataMapper.finalize.auto_upgrade! #updates schema upon change
+# helpers do
+# 	include Rack::Utils
+# 	alias_method :h, :escape_html
+# end 
 
-set :prawn, { :page_layout => :landscape}
+# set :prawn, { :page_layout => :landscape}
 
 
 get '/' do
@@ -56,6 +56,10 @@ get '/resume' do
 erb :resume
 
 end
+
+not_found do
+  status 404
+  'Sorry, but the web page was not found.'
 
 
 # post '/question' do
@@ -158,8 +162,5 @@ end
 
 
 
-not_found do
-	status 404
-	'Sorry, but the web page was not found.'
 end
 
