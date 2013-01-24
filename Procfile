@@ -1,1 +1,0 @@
-web: ruby seans_site.rb -p $PORT
