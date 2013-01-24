@@ -4,7 +4,7 @@ require 'sinatra/base'
 # require 'rack-flash'
 # require 'sinatra/redirect_with_flash'
 # require 'haml'
-require 'Date'
+# require 'Date'
 set :root, File.dirname(__FILE__)
 set :haml, :format => :html5
 # enable :sessions, :logging, :dump_errors
