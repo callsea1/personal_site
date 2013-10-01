@@ -9,8 +9,8 @@ set :root, File.dirname(__FILE__)
 set :haml, :format => :html5
 # enable :sessions, :logging, :dump_errors
 # use Rack::Flash, :sweep => true
-SITE_TITLE = "Sean Callahan sings Sinatra"
-SITE_DESCRIPTION = "'Cause working with Sean is pretty great."
+SITE_TITLE = "Sean Callahan | Ruby Pragmatist"
+SITE_DESCRIPTION = "Professional Webapps"
 
 
 # DataMapper::setup(:default, "sqlite://#{Dir.pwd}/seans_site.db")
