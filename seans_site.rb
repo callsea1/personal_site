@@ -29,4 +29,3 @@ not_found do
   'Sorry, but the web page was not found.'
 
 end
-
