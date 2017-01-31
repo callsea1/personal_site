@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.1.2"
+ruby "2.3.1"
 gem "sinatra", :require => "sinatra/base"
 # gem 'data_mapper'
 # gem 'rack-flash'
