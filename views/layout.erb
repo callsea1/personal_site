@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title><%= "#{@title || SITE_TITLE}" %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <title><%= "#{@title || SITE_TITLE}" %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
+        <link rel="stylesheet" href="/css/reset.css" type="text/css"/>
+        <link href="/css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/reset.css" type="text/css" />
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    </head>
 
-  </head>
+    <body>
 
-  <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
 
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
 
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
+                    <a class="brand" href="/">Sean P. Callahan</a>
 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
+                    <!-- Everything you want hidden at 940px or less, place within here -->
+                    <div class="nav-collapse collapse">
+                        <!-- .nav, .navbar-search, .navbar-form, etc -->
+                        <ul class="nav">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="/resume">Resume</a>
+                            </li>
+                        </ul>
+                    </div>
 
-      <a class="brand" href="/">Sean P. Callahan</a>
+                </div>
+            </div>
+        </div>
 
-      <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse">
-        <!-- .nav, .navbar-search, .navbar-form, etc -->
-        <ul class="nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/resume">Resume</a></li>
-            </ul>
-      </div>
+        <div class="container-fluid">
 
-    </div>
-  </div>
-</div>
+            <%= yield %>
+            <div class="span9">
+                <hr>
 
+                <footer>
+                    <p>&copy; S.P.C.</p>
+                </footer>
+            </div>
 
+        </div>
+        <!--/.fluid-container-->
 
-
-    <div class="container-fluid">
-
-
-        <%= yield %>
-        <div class="span9">
-      <hr>
-
-      <footer>
-        <p>&copy; S.P.C.</p>
-      </footer>
-    </div>
-
-    </div><!--/.fluid-container-->
-
-    <!--
+        <!--
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.js"></script>
-    <script src="../js/bootstrap-collapse.js"></script>
-    <script src="../js/bootstrap-dropdown.js"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery.js"></script>
+        <script src="../js/bootstrap-collapse.js"></script>
+        <script src="../js/bootstrap-dropdown.js"></script>
 
-  </body>
+    </body>
 </html>
