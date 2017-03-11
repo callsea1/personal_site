@@ -4,8 +4,7 @@ timeout 15
 preload_app true
 
 # set path to app that will be used to configure unicorn,
-# @dir = "/var/www/personal_site"
-@dir = "../."
+@dir = "/var/www/personal_site"
 
 # Specify path to socket unicorn listens to,
 # we will use this in our nginx.conf later
